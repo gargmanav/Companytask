@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="addfunc(event)">
+        <input type="text" id="first" placeholder="firstname">
+        <input type="text" id="second" placeholder="lastname"> 
+        <p id="dikhao"></p>
+        <button type="submit">submit</button>
+    </form>
+
+  <div class="div1">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+        </tr>
+        <tbody id="comedata">
+            <tr id="datas">
+                <td>Manav</td>
+                <td>23</td>
+                <td>mr.manavgarg@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="addrow()">Addrow</button>
+
+    <div>
+        <form> 
+
+            <select id="colorSelect"> 
+            <option>Red</option>
+            <option>Green</option> 
+            <option>White</option> 
+            <option>Black</option> </select> 
+            <input type="button" onclick="removecolor()"value="Select and Remove"> 
+            
+            </form>
+    </div>
+  </div>
+    <script>
+       function addfunc(event){
+         event.preventDefault()
+         const first  = document.getElementById("first")
+         const second = document.getElementById("second")
+         const dikhao = document.getElementById("dikhao")
+         dikhao.innerHTML = "FirstName:"+first.value + " " + "LastName:"+second.value;
+       }
+
+
+    function addrow(){
+        var table = document.getElementById("table")
+        const datas = document.getElementById("datas")
+       const comedata = document.getElementById("comedata")
+       comedata.innerHTML += datas.innerHTML
+
+   
+    }
+
+
+
+    function removecolor(){
+        const colorSelect = document.getElementById("colorSelect")
+        for(let i = 0;i<colorSelect.length;i++){
+            let color = colorSelect[i]
+            color.remove()
+        }
+    }
+    </script>
+</body>
+</html>

@@ -15,7 +15,7 @@ const Daysdata = () => {
 
   
 
-  const firstEightDays = alldata.days && alldata.days.slice(0, 8); // Extract the first 8 elements of the array
+  const firstEightDays = alldata && alldata.days.slice(0, 8); // Extract the first 8 elements of the array
   console.log(alldata.days);
   return (
     <div>

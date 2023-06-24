@@ -1,0 +1,145 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <!-- <p id="para"></p>
+    <h2 id="res">0</h2>
+    <button id="inc" onclick="inc()">incrres</button>
+    <button id="dec" onclick="dec()">decres</button> -->
+    <!-- <p id="para">hello world</p>
+  <button onclick="change()">change</button> -->
+
+    <!-- <form onsubmit="display(event)">
+        <input id="inp1" type="text" placeholder="first name">
+        <input id="inp2"type="text" placeholder="last name">
+        <button type="submit">submit</button>
+    </form>
+    <h1 id="para" style="color: red;"></h1> -->
+
+    <!-- <div class="div1">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <tr>
+                    <td>samina</td>
+                    <td>25</td>
+                    <td>tanichuhiu@ydu</td>
+                  </tr> 
+            </tbody>
+        </table>
+        <button onclick="add()">add</button>
+    </div> -->
+
+    <form>
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <input type="button" onclick="removecolor()" value="Select and Remove">
+   </form>
+   <script>
+// const para = document.getElementById("para")
+// let val = 1000
+
+// const clearInt=setInterval(function name() {
+//         para.innerText = val
+//         val += 500
+//      if (val===3) {
+//     setInterval(clear)
+
+//      }
+
+
+// }, 3000)
+
+// var  res=document.getElementById("res")
+// var val=0
+// function inc() {
+//    val++
+//    res.innerText=val 
+// }
+// function dec() {
+//     val--
+//     res.innerText=val 
+//  }
+
+
+// const para=document.getElementById("para")
+// function change() {
+//     para.style.color="red"
+//     para.style.fontSize="24px"
+// }
+
+// function display(event) {
+//     event.preventDefault()
+//     const inp1 = document.getElementById("inp1")
+//     const inp2 = document.getElementById("inp2")
+
+//     const para = document.getElementById("para")
+//     para.innerText = "FirstName:" +inp1.value + " " + "LastName:"+inp2.value
+// }
+
+// function add() {
+//     const table=document.getElementById("table")
+//     var row=table.insertRow()
+
+//     var cellName=row.insertCell()
+//     cellName.innerText="hello"
+
+//     row.insertCell().innerText="34"
+//     row.insertCell().innerText="tanichouhan@1233"
+// }
+
+function removecolor() {
+    const colorSelect = document.getElementById("colorSelect")
+    // let val = colorSelect.value
+    for (let i = 0; i < colorSelect.length; i++) {
+        let color=colorSelect[i];
+        color.remove()
+        
+    }
+}
+
+const shape = {
+    radius: 10,
+    diameter() {
+      return this.radius * 2;
+    },
+    perimeter: () => 2 * Math.PI * this.radius,
+  };
+  
+  console.log(shape.diameter());
+  console.log(shape.perimeter());
+  let c = { greeting: 'Hey!' };
+let d;
+
+d = c;
+c.greeting = 'Hello';
+console.log(d.greeting);
+
+const obj = { 1: 'a', 2: 'b', 3: 'c' };
+const set = new Set([1, 2, 3, 4, 5]);
+obj.hasOwnProperty('1');
+obj.hasOwnProperty(1);
+set.has('1');
+set.has(1);
+   </script>
+</body>
+
+</html>
