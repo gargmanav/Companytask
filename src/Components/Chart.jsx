@@ -9,7 +9,7 @@ ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip,
 const Chart = () => {
   const [tempdata, settempdata] = useState([42, 38, 34, 32, 31, 35, 40, 43]);
   const alldata = useSelector(Storedata => Storedata.Wholedata);
-  const labels = ['7 pm', '10 am', '1 am', '4 am', '7 am', '10 am', '1 pm', '4 pm'];
+  const labels = ['8 am', '9am', '10am', '11 am', '12 pm', '1 pm', '2 pm', '3pm'];
   const data = {
     labels,
     datasets: [
@@ -22,7 +22,7 @@ const Chart = () => {
   };
 
   const newdata = () => {
-    const first = alldata && alldata.days[0].hours.slice(0, 8).map((ele) => {
+    const first = alldata && alldata.days[0].hours.slice(8, 16).map((ele) => {
       return ele.temp;
     });
     settempdata(first);
